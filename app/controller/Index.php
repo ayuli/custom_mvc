@@ -9,9 +9,15 @@ Class Index extends Controller
     {
         // echo '鱼鱼鱼自定义框架首页'.'<hr>';
         $obj = new IndexModel();
-        $Info = $obj->getInfo();
+        $info = $obj->getInfo();
         // 传值到视图层
-        $this->view('',$Info);
+        // $this->view('index/index',['info'=>$info]);
+        $this->redirect('user');
+    }
+
+    public function user()
+    {
+        echo 1;
     }
   
 }
